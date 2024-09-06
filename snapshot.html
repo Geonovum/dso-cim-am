@@ -1,16 +1,16 @@
 <!DOCTYPE html><html lang="nl"><head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
-<meta name="generator" content="ReSpec 34.1.4">
+<meta name="generator" content="ReSpec 35.1.1">
 <style>
 dfn{cursor:pointer}
-.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;background:var(--indextable-hover-bg,#fff);color:#000;color:var(--text,#000);box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);box-shadow:0 1em 3em -.4em var(--tocsidebar-shadow,rgba(0,0,0,.3)),0 0 1px 1px var(--tocsidebar-shadow,rgba(0,0,0,.05));border-radius:2px}
 .dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
-.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
-.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;border-bottom-color:var(--indextable-hover-bg,#fff);top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1;border-bottom-color:var(--indextable-hover-bg,#a2a9b1)}
 .dfn-panel *{margin:0}
-.dfn-panel b{display:block;color:#000;margin-top:.25em}
-.dfn-panel ul a[href]{color:#333}
+.dfn-panel b{display:block;color:#000;color:var(--text,#000);margin-top:.25em}
+.dfn-panel ul a[href]{color:#333;color:var(--text,#333)}
 .dfn-panel>div{display:flex}
 .dfn-panel a.self-link{font-weight:700;margin-right:auto}
 .dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
@@ -48,8 +48,6 @@ div.imageinfo.overview img {max-width: none;}
 25%{transform:scale(1.25,1.25);opacity:.75}
 100%{transform:scale(1,1)}
 }
-:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
-dfn{font-weight:700}
 a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
 a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
 a.bibref{text-decoration:none}
@@ -63,20 +61,8 @@ a.bibref{text-decoration:none}
 cite .bibref{font-style:normal}
 a[href].orcid{padding-left:4px;padding-right:4px}
 a[href].orcid>svg{margin-bottom:-2px}
-.toc a,.tof a{text-decoration:none}
-a .figno,a .secno{color:#000}
 ol.tof,ul.tof{list-style:none outside none}
 .caption{margin-top:.5em;font-style:italic}
-table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
-.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
-.simple th a{color:#fff;padding:3px 5px;text-align:left}
-.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
-.simple td{padding:3px 10px;border-top:1px solid #ddd}
-.simple tr:nth-child(even){background:#f0f6ff}
-.section dd>p:first-child{margin-top:0}
-.section dd>p:last-child{margin-bottom:0}
-.section dd{margin-bottom:1em}
-.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
 #issue-summary>ul{column-count:2}
 #issue-summary li{list-style:none;display:inline-block}
 details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
@@ -195,6 +181,7 @@ DSO.">
       "cv": "Candidate recommendation",
       "vv": "Proposed recommendation",
       "def": "Recommendation",
+      "ld": "Living document",
       "basis": "Document",
       "no": "Norm",
       "st": "Standard",
@@ -211,6 +198,7 @@ DSO.">
       "cv": "Consultatieversie",
       "vv": "Versie ter vaststelling",
       "def": "Vastgestelde versie",
+      "ld": "Levend document",
       "basis": "Document",
       "no": "Norm",
       "st": "Standaard",
@@ -230,7 +218,8 @@ DSO.">
       "wv": "Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.",
       "cv": "Dit is een consultatieversie. Commentaar over dit document kan gestuurd worden naar ",
       "vv": "Dit is de definitieve conceptversie van dit document. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.",
-      "basis": "Dit is een document zonder officiële status."
+      "basis": "Dit is een document zonder officiële status.",
+      "ld": "Dit is een levend document dat regelmatig gewijzigd wordt."
     },
     "en": {
       "sotd": "Status of this document",
@@ -238,7 +227,8 @@ DSO.">
       "wv": "This is a working draft that can be changed, removed or replaced by other documents at any time. It is not a stable document.",
       "cv": "This is a stable draft, published for public comment. Comments regarding this document may be sent to ",
       "vv": "This is the final draft of this document. Edits resulting from consultations have been applied.",
-      "basis": "This document has no official standing."
+      "basis": "This document has no official standing.",
+      "ld": "This is a living document, which is updated regularly."
     }
   },
   "labelColor": {
@@ -246,7 +236,8 @@ DSO.">
     "wv": "#FF0000",
     "cv": "#045D9F",
     "vv": "#045D9F",
-    "basis": "#80CC28"
+    "basis": "#80CC28",
+    "ld": "#80CC28"
   },
   "licenses": {
     "cc0": {
@@ -313,6 +304,7 @@ DSO.">
   "title": "Conceptueel Informatiemodel Aanvragen en Meldingen",
   "specStatus": "wv",
   "specType": "IM",
+  "nl_organisationStylesURL": "https://tools.geostandaarden.nl/respec/style/",
   "pubDomain": "dso",
   "licence": "cc-by",
   "shortName": "dso-cim-am",
@@ -338,7 +330,7 @@ DSO.">
     }
   ]
 }</script>
-<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base.css"></head>
+<link rel="stylesheet" href="https://tools.geostandaarden.nl/respec/style/base.css"></head>
 
 <body class="h-entry toc-inline"><div class="head">
     <a class="logo" href="https://www.geonovum.nl/geo-standaarden"><img alt="Geonovum" height="67" id="Geonovum" src="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg" width="132">
@@ -347,7 +339,7 @@ DSO.">
     <h2>
       Geonovum Informatiemodel<br>
       Werkversie
-      <time class="dt-published" datetime="2023-12-05">05 december 2023</time>
+      <time class="dt-published" datetime="2024-09-06">06 september 2024</time>
     </h2>
     <dl>
       
@@ -522,7 +514,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMAM_Bijlagevraag">
          <div class="header-wrapper"><h4 id="x5-5-1-bijlagevraag"><bdi class="secno">5.5.1 </bdi>   Bijlagevraag</h4><a class="self-link" href="#global_class_CIMAM_Bijlagevraag" aria-label="Permalink for Section 5.5.1"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -563,7 +555,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMAM_Bijlagevraag" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -621,7 +613,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMAM_Vraag">
          <div class="header-wrapper"><h4 id="x5-5-2-vraag"><bdi class="secno">5.5.2 </bdi>   Vraag</h4><a class="self-link" href="#global_class_CIMAM_Vraag" aria-label="Permalink for Section 5.5.2"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -666,7 +658,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMAM_Vraag" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -705,7 +697,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-0">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMAM_Vraag" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -763,7 +755,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMAM_IngediendVerzoek">
          <div class="header-wrapper"><h4 id="x5-5-3-ingediend-verzoek"><bdi class="secno">5.5.3 </bdi>   Ingediend verzoek</h4><a class="self-link" href="#global_class_CIMAM_IngediendVerzoek" aria-label="Permalink for Section 5.5.3"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -825,7 +817,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-0">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMAM_IngediendVerzoek" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -874,7 +866,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-1">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMAM_IngediendVerzoek" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -962,7 +954,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMAM_Verzoek">
          <div class="header-wrapper"><h4 id="x5-5-4-verzoek"><bdi class="secno">5.5.4 </bdi>   Verzoek</h4><a class="self-link" href="#global_class_CIMAM_Verzoek" aria-label="Permalink for Section 5.5.4"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -1019,7 +1011,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-1">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMAM_Verzoek" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -1078,7 +1070,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-2">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMAM_Verzoek" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -1164,7 +1156,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMAM_IngevuldeVragenlijst">
          <div class="header-wrapper"><h4 id="x5-5-5-ingevulde-vragenlijst"><bdi class="secno">5.5.5 </bdi>   Ingevulde vragenlijst</h4><a class="self-link" href="#global_class_CIMAM_IngevuldeVragenlijst" aria-label="Permalink for Section 5.5.5"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -1207,7 +1199,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-3">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMAM_IngevuldeVragenlijst" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -1279,7 +1271,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMAM_Antwoord">
          <div class="header-wrapper"><h4 id="x5-5-6-antwoord"><bdi class="secno">5.5.6 </bdi>   Antwoord</h4><a class="self-link" href="#global_class_CIMAM_Antwoord" aria-label="Permalink for Section 5.5.6"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -1320,7 +1312,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-2">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMAM_Antwoord" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -1349,7 +1341,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-4">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMAM_Antwoord" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -1407,7 +1399,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMAM_Adviseur">
          <div class="header-wrapper"><h4 id="x5-5-7-adviseur"><bdi class="secno">5.5.7 </bdi>   Adviseur</h4><a class="self-link" href="#global_class_CIMAM_Adviseur" aria-label="Permalink for Section 5.5.7"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -1450,7 +1442,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-5">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMAM_Adviseur" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -1490,7 +1482,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMAM_Bijlage">
          <div class="header-wrapper"><h4 id="x5-5-8-bijlage"><bdi class="secno">5.5.8 </bdi>   Bijlage</h4><a class="self-link" href="#global_class_CIMAM_Bijlage" aria-label="Permalink for Section 5.5.8"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -1522,7 +1514,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-6">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMAM_Bijlage" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -1580,7 +1572,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMAM_Gemachtigde">
          <div class="header-wrapper"><h4 id="x5-5-9-gemachtigde"><bdi class="secno">5.5.9 </bdi>   Gemachtigde</h4><a class="self-link" href="#global_class_CIMAM_Gemachtigde" aria-label="Permalink for Section 5.5.9"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -1608,7 +1600,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-7">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMAM_Gemachtigde" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -1662,7 +1654,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMAM_ToegekendBevoegdGezag">
          <div class="header-wrapper"><h4 id="x5-5-10-toegekend-bevoegd-gezag"><bdi class="secno">5.5.10 </bdi>   Toegekend Bevoegd Gezag</h4><a class="self-link" href="#global_class_CIMAM_ToegekendBevoegdGezag" aria-label="Permalink for Section 5.5.10"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -1713,7 +1705,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-3">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMAM_ToegekendBevoegdGezag" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -1752,7 +1744,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-8">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMAM_ToegekendBevoegdGezag" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -1796,7 +1788,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMAM_Initiatiefnemer">
          <div class="header-wrapper"><h4 id="x5-5-11-initiatiefnemer"><bdi class="secno">5.5.11 </bdi>   Initiatiefnemer</h4><a class="self-link" href="#global_class_CIMAM_Initiatiefnemer" aria-label="Permalink for Section 5.5.11"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -1838,7 +1830,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-4">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMAM_Initiatiefnemer" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -1877,7 +1869,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-9">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMAM_Initiatiefnemer" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -1945,7 +1937,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMAM_Projectlocatie">
          <div class="header-wrapper"><h4 id="x5-5-12-projectlocatie"><bdi class="secno">5.5.12 </bdi>   Projectlocatie</h4><a class="self-link" href="#global_class_CIMAM_Projectlocatie" aria-label="Permalink for Section 5.5.12"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -1989,7 +1981,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-5">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMAM_Projectlocatie" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -2028,7 +2020,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-10">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMAM_Projectlocatie" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -2058,7 +2050,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMAM_Document">
          <div class="header-wrapper"><h4 id="x5-5-13-document"><bdi class="secno">5.5.13 </bdi>   Document</h4><a class="self-link" href="#global_class_CIMAM_Document" aria-label="Permalink for Section 5.5.13"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -2103,7 +2095,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-6">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMAM_Document" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -2132,7 +2124,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-11">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMAM_Document" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -2165,7 +2157,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMAM_Bronlocatie">
          <div class="header-wrapper"><h4 id="x5-6-1-gestructureerd-datatype-bronlocatie"><bdi class="secno">5.6.1 </bdi>Gestructureerd datatype   Bronlocatie</h4><a class="self-link" href="#global_class_CIMAM_Bronlocatie" aria-label="Permalink for Section 5.6.1"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -2179,7 +2171,7 @@ dataspecificatie.</p>
          <section id="overzicht-data-elementen">
             <div class="header-wrapper"><h5 id="x5-6-1-1-overzicht-data-elementen"><bdi class="secno">5.6.1.1 </bdi>Overzicht data elementen   </h5><a class="self-link" href="#overzicht-data-elementen" aria-label="Permalink for Section 5.6.1.1"></a></div>
             
-            <table style="width: 100%;" class="simple">
+            <table style="width: 100%;">
                <colgroup style="width: 30%;"></colgroup>
                <colgroup style="width: 50%;"></colgroup>
                <colgroup style="width: 10%;"></colgroup>
@@ -2212,7 +2204,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMAM_Geolocatie">
          <div class="header-wrapper"><h4 id="x5-7-1-primitief-datatype-geolocatie"><bdi class="secno">5.7.1 </bdi>Primitief datatype   Geolocatie</h4><a class="self-link" href="#global_class_CIMAM_Geolocatie" aria-label="Permalink for Section 5.7.1"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -2227,7 +2219,7 @@ dataspecificatie.</p>
    <section id="enumeraties">
       <div class="header-wrapper"><h3 id="x5-8-enumeraties"><bdi class="secno">5.8 </bdi>Enumeraties   </h3><a class="self-link" href="#enumeraties" aria-label="Permalink for Section 5.8"></a></div>
       
-      <table style="width: 100%;" class="simple">
+      <table style="width: 100%;">
          <colgroup style="width: 30%;"></colgroup>
          <colgroup style="width: 70%;"></colgroup>
          <tbody>
@@ -2258,7 +2250,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMAM_Vraag_groep">
                <div class="header-wrapper"><h6 id="x5-9-1-1-1-attribuutsoort-details-vraag-groep"><bdi class="secno">5.9.1.1.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMAM_Vraag">Vraag</a> groep</h6><a class="self-link" href="#detail_attribute_CIMAM_Vraag_groep" aria-label="Permalink for Section 5.9.1.1.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -2308,7 +2300,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMAM_Vraag_id">
                <div class="header-wrapper"><h6 id="x5-9-1-1-2-attribuutsoort-details-vraag-id"><bdi class="secno">5.9.1.1.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMAM_Vraag">Vraag</a> id</h6><a class="self-link" href="#detail_attribute_CIMAM_Vraag_id" aria-label="Permalink for Section 5.9.1.1.2"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -2358,7 +2350,7 @@ dataspecificatie.</p>
             <section id="detail_association_CIMAM_Vraag_vraagreferentie">
                <div class="header-wrapper"><h6 id="x5-9-1-1-3-externe-koppeling-details-vraag-vraagreferentie"><bdi class="secno">5.9.1.1.3 </bdi>Externe koppeling details  <a href="#global_class_CIMAM_Vraag">Vraag</a> vraagreferentie</h6><a class="self-link" href="#detail_association_CIMAM_Vraag_vraagreferentie" aria-label="Permalink for Section 5.9.1.1.3"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -2383,7 +2375,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMAM_IngediendVerzoek_indiendatum">
                <div class="header-wrapper"><h6 id="x5-9-1-2-1-attribuutsoort-details-ingediend-verzoek-indiendatum"><bdi class="secno">5.9.1.2.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMAM_IngediendVerzoek">Ingediend verzoek</a> indiendatum</h6><a class="self-link" href="#detail_attribute_CIMAM_IngediendVerzoek_indiendatum" aria-label="Permalink for Section 5.9.1.2.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -2433,7 +2425,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMAM_IngediendVerzoek_verzoeknummer">
                <div class="header-wrapper"><h6 id="x5-9-1-2-2-attribuutsoort-details-ingediend-verzoek-verzoeknummer"><bdi class="secno">5.9.1.2.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMAM_IngediendVerzoek">Ingediend verzoek</a> verzoeknummer</h6><a class="self-link" href="#detail_attribute_CIMAM_IngediendVerzoek_verzoeknummer" aria-label="Permalink for Section 5.9.1.2.2"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -2483,7 +2475,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMAM_IngediendVerzoek_volgnummer">
                <div class="header-wrapper"><h6 id="x5-9-1-2-3-attribuutsoort-details-ingediend-verzoek-volgnummer"><bdi class="secno">5.9.1.2.3 </bdi>Attribuutsoort details  <a href="#global_class_CIMAM_IngediendVerzoek">Ingediend verzoek</a> volgnummer</h6><a class="self-link" href="#detail_attribute_CIMAM_IngediendVerzoek_volgnummer" aria-label="Permalink for Section 5.9.1.2.3"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -2534,7 +2526,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-9-1-2-4-relatiesoort-details-ingediend-verzoek-is-aanvulling-op"><bdi class="secno">5.9.1.2.4 </bdi>Relatiesoort details  <a href="#global_class_CIMAM_IngediendVerzoek">Ingediend verzoek</a> is aanvulling op</h6><a class="self-link" href="#detail_association_CIMAM_IngediendVerzoek_isAanvullingOp" aria-label="Permalink for Section 5.9.1.2.4"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -2563,7 +2555,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMAM_Verzoek_doel">
                <div class="header-wrapper"><h6 id="x5-9-1-3-1-attribuutsoort-details-verzoek-doel"><bdi class="secno">5.9.1.3.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMAM_Verzoek">Verzoek</a> doel</h6><a class="self-link" href="#detail_attribute_CIMAM_Verzoek_doel" aria-label="Permalink for Section 5.9.1.3.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -2613,7 +2605,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMAM_Verzoek_type">
                <div class="header-wrapper"><h6 id="x5-9-1-3-2-attribuutsoort-details-verzoek-type"><bdi class="secno">5.9.1.3.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMAM_Verzoek">Verzoek</a> type</h6><a class="self-link" href="#detail_attribute_CIMAM_Verzoek_type" aria-label="Permalink for Section 5.9.1.3.2"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -2663,7 +2655,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMAM_Verzoek_toelichting">
                <div class="header-wrapper"><h6 id="x5-9-1-3-3-attribuutsoort-details-verzoek-toelichting"><bdi class="secno">5.9.1.3.3 </bdi>Attribuutsoort details  <a href="#global_class_CIMAM_Verzoek">Verzoek</a> toelichting</h6><a class="self-link" href="#detail_attribute_CIMAM_Verzoek_toelichting" aria-label="Permalink for Section 5.9.1.3.3"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -2713,7 +2705,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMAM_Verzoek_participatie">
                <div class="header-wrapper"><h6 id="x5-9-1-3-4-attribuutsoort-details-verzoek-participatie"><bdi class="secno">5.9.1.3.4 </bdi>Attribuutsoort details  <a href="#global_class_CIMAM_Verzoek">Verzoek</a> participatie</h6><a class="self-link" href="#detail_attribute_CIMAM_Verzoek_participatie" aria-label="Permalink for Section 5.9.1.3.4"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -2764,7 +2756,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-9-1-3-5-relatiesoort-details-verzoek-heeft-betrekking-op"><bdi class="secno">5.9.1.3.5 </bdi>Relatiesoort details  <a href="#global_class_CIMAM_Verzoek">Verzoek</a> heeft betrekking op</h6><a class="self-link" href="#detail_association_CIMAM_Verzoek_heeftBetrekkingOp" aria-label="Permalink for Section 5.9.1.3.5"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -2790,7 +2782,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-9-1-3-6-relatiesoort-details-verzoek-wordt-ingediend-met"><bdi class="secno">5.9.1.3.6 </bdi>Relatiesoort details  <a href="#global_class_CIMAM_Verzoek">Verzoek</a> wordt ingediend met</h6><a class="self-link" href="#detail_association_CIMAM_Verzoek_wordtIngediendMet" aria-label="Permalink for Section 5.9.1.3.6"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -2816,7 +2808,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-9-1-3-7-relatiesoort-details-verzoek-wordt-ingediend-met"><bdi class="secno">5.9.1.3.7 </bdi>Relatiesoort details  <a href="#global_class_CIMAM_Verzoek">Verzoek</a> wordt ingediend met</h6><a class="self-link" href="#detail_association_CIMAM_Verzoek_wordtIngediendMet" aria-label="Permalink for Section 5.9.1.3.7"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -2845,7 +2837,7 @@ dataspecificatie.</p>
             <section id="detail_association_CIMAM_IngevuldeVragenlijst_heeftBetrekkingOp">
                <div class="header-wrapper"><h6 id="x5-9-1-4-1-externe-koppeling-details-ingevulde-vragenlijst-heeft-betrekking-op"><bdi class="secno">5.9.1.4.1 </bdi>Externe koppeling details  <a href="#global_class_CIMAM_IngevuldeVragenlijst">Ingevulde vragenlijst</a> heeft betrekking op</h6><a class="self-link" href="#detail_association_CIMAM_IngevuldeVragenlijst_heeftBetrekkingOp" aria-label="Permalink for Section 5.9.1.4.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -2867,7 +2859,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-9-1-4-2-relatiesoort-details-ingevulde-vragenlijst-groepeert"><bdi class="secno">5.9.1.4.2 </bdi>Relatiesoort details  <a href="#global_class_CIMAM_IngevuldeVragenlijst">Ingevulde vragenlijst</a> groepeert</h6><a class="self-link" href="#detail_association_CIMAM_IngevuldeVragenlijst_groepeert" aria-label="Permalink for Section 5.9.1.4.2"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -2893,7 +2885,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-9-1-4-3-relatiesoort-details-ingevulde-vragenlijst-groepeert"><bdi class="secno">5.9.1.4.3 </bdi>Relatiesoort details  <a href="#global_class_CIMAM_IngevuldeVragenlijst">Ingevulde vragenlijst</a> groepeert</h6><a class="self-link" href="#detail_association_CIMAM_IngevuldeVragenlijst_groepeert" aria-label="Permalink for Section 5.9.1.4.3"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -2922,7 +2914,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMAM_Antwoord_waarde">
                <div class="header-wrapper"><h6 id="x5-9-1-5-1-attribuutsoort-details-antwoord-waarde"><bdi class="secno">5.9.1.5.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMAM_Antwoord">Antwoord</a> waarde</h6><a class="self-link" href="#detail_attribute_CIMAM_Antwoord_waarde" aria-label="Permalink for Section 5.9.1.5.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -2972,7 +2964,7 @@ dataspecificatie.</p>
             <section id="detail_association_CIMAM_Antwoord_isEen">
                <div class="header-wrapper"><h6 id="x5-9-1-5-2-externe-koppeling-details-antwoord-is-een"><bdi class="secno">5.9.1.5.2 </bdi>Externe koppeling details  <a href="#global_class_CIMAM_Antwoord">Antwoord</a> is een</h6><a class="self-link" href="#detail_association_CIMAM_Antwoord_isEen" aria-label="Permalink for Section 5.9.1.5.2"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -2994,7 +2986,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-9-1-5-3-relatiesoort-details-antwoord-beantwoord"><bdi class="secno">5.9.1.5.3 </bdi>Relatiesoort details  <a href="#global_class_CIMAM_Antwoord">Antwoord</a> beantwoord</h6><a class="self-link" href="#detail_association_CIMAM_Antwoord_beantwoord" aria-label="Permalink for Section 5.9.1.5.3"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3024,7 +3016,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-9-1-6-1-relatiesoort-details-adviseur-adviseert"><bdi class="secno">5.9.1.6.1 </bdi>Relatiesoort details  <a href="#global_class_CIMAM_Adviseur">Adviseur</a> adviseert</h6><a class="self-link" href="#detail_association_CIMAM_Adviseur_adviseert" aria-label="Permalink for Section 5.9.1.6.1"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3054,7 +3046,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-9-1-7-1-relatiesoort-details-bijlage-beantwoord"><bdi class="secno">5.9.1.7.1 </bdi>Relatiesoort details  <a href="#global_class_CIMAM_Bijlage">Bijlage</a> beantwoord</h6><a class="self-link" href="#detail_association_CIMAM_Bijlage_beantwoord" aria-label="Permalink for Section 5.9.1.7.1"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3084,7 +3076,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-9-1-8-1-relatiesoort-details-gemachtigde-vertegenwoordigt"><bdi class="secno">5.9.1.8.1 </bdi>Relatiesoort details  <a href="#global_class_CIMAM_Gemachtigde">Gemachtigde</a> vertegenwoordigt</h6><a class="self-link" href="#detail_association_CIMAM_Gemachtigde_vertegenwoordigt" aria-label="Permalink for Section 5.9.1.8.1"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3110,7 +3102,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-9-1-8-2-relatiesoort-details-gemachtigde-is-gemachtigd-voor"><bdi class="secno">5.9.1.8.2 </bdi>Relatiesoort details  <a href="#global_class_CIMAM_Gemachtigde">Gemachtigde</a> is gemachtigd voor</h6><a class="self-link" href="#detail_association_CIMAM_Gemachtigde_isGemachtigdVoor" aria-label="Permalink for Section 5.9.1.8.2"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3139,7 +3131,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMAM_ToegekendBevoegdGezag_oin">
                <div class="header-wrapper"><h6 id="x5-9-1-9-1-attribuutsoort-details-toegekend-bevoegd-gezag-oin"><bdi class="secno">5.9.1.9.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMAM_ToegekendBevoegdGezag">Toegekend Bevoegd Gezag</a> oin</h6><a class="self-link" href="#detail_attribute_CIMAM_ToegekendBevoegdGezag_oin" aria-label="Permalink for Section 5.9.1.9.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3189,7 +3181,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMAM_ToegekendBevoegdGezag_naam">
                <div class="header-wrapper"><h6 id="x5-9-1-9-2-attribuutsoort-details-toegekend-bevoegd-gezag-naam"><bdi class="secno">5.9.1.9.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMAM_ToegekendBevoegdGezag">Toegekend Bevoegd Gezag</a> naam</h6><a class="self-link" href="#detail_attribute_CIMAM_ToegekendBevoegdGezag_naam" aria-label="Permalink for Section 5.9.1.9.2"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3240,7 +3232,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-9-1-9-3-relatiesoort-details-toegekend-bevoegd-gezag-maakt-verantwoordelijk-voor"><bdi class="secno">5.9.1.9.3 </bdi>Relatiesoort details  <a href="#global_class_CIMAM_ToegekendBevoegdGezag">Toegekend Bevoegd Gezag</a> maakt verantwoordelijk voor</h6><a class="self-link" href="#detail_association_CIMAM_ToegekendBevoegdGezag_maaktVerantwoordelijkVoor" aria-label="Permalink for Section 5.9.1.9.3"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3265,7 +3257,7 @@ dataspecificatie.</p>
             <section id="detail_association_CIMAM_ToegekendBevoegdGezag_isToegekendAan">
                <div class="header-wrapper"><h6 id="x5-9-1-9-4-externe-koppeling-details-toegekend-bevoegd-gezag-is-toegekend-aan"><bdi class="secno">5.9.1.9.4 </bdi>Externe koppeling details  <a href="#global_class_CIMAM_ToegekendBevoegdGezag">Toegekend Bevoegd Gezag</a> is toegekend aan</h6><a class="self-link" href="#detail_association_CIMAM_ToegekendBevoegdGezag_isToegekendAan" aria-label="Permalink for Section 5.9.1.9.4"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3290,7 +3282,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMAM_Initiatiefnemer_identificatie">
                <div class="header-wrapper"><h6 id="x5-9-1-10-1-attribuutsoort-details-initiatiefnemer-identificatie"><bdi class="secno">5.9.1.10.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMAM_Initiatiefnemer">Initiatiefnemer</a> identificatie</h6><a class="self-link" href="#detail_attribute_CIMAM_Initiatiefnemer_identificatie" aria-label="Permalink for Section 5.9.1.10.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3340,7 +3332,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMAM_Initiatiefnemer_contactgegevens">
                <div class="header-wrapper"><h6 id="x5-9-1-10-2-attribuutsoort-details-initiatiefnemer-contactgegevens"><bdi class="secno">5.9.1.10.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMAM_Initiatiefnemer">Initiatiefnemer</a> contactgegevens</h6><a class="self-link" href="#detail_attribute_CIMAM_Initiatiefnemer_contactgegevens" aria-label="Permalink for Section 5.9.1.10.2"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3391,7 +3383,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-9-1-10-3-relatiesoort-details-initiatiefnemer-is-verantwoordelijk-voor"><bdi class="secno">5.9.1.10.3 </bdi>Relatiesoort details  <a href="#global_class_CIMAM_Initiatiefnemer">Initiatiefnemer</a> is verantwoordelijk voor</h6><a class="self-link" href="#detail_association_CIMAM_Initiatiefnemer_isVerantwoordelijkVoor" aria-label="Permalink for Section 5.9.1.10.3"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3420,7 +3412,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMAM_Projectlocatie_bronLocatie">
                <div class="header-wrapper"><h6 id="x5-9-1-11-1-attribuutsoort-details-projectlocatie-bron-locatie"><bdi class="secno">5.9.1.11.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMAM_Projectlocatie">Projectlocatie</a> bron­Locatie</h6><a class="self-link" href="#detail_attribute_CIMAM_Projectlocatie_bronLocatie" aria-label="Permalink for Section 5.9.1.11.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3470,7 +3462,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMAM_Projectlocatie_locatie">
                <div class="header-wrapper"><h6 id="x5-9-1-11-2-attribuutsoort-details-projectlocatie-locatie"><bdi class="secno">5.9.1.11.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMAM_Projectlocatie">Projectlocatie</a> locatie</h6><a class="self-link" href="#detail_attribute_CIMAM_Projectlocatie_locatie" aria-label="Permalink for Section 5.9.1.11.2"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3524,7 +3516,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMAM_Document_id">
                <div class="header-wrapper"><h6 id="x5-9-1-12-1-attribuutsoort-details-document-id"><bdi class="secno">5.9.1.12.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMAM_Document">Document</a> id</h6><a class="self-link" href="#detail_attribute_CIMAM_Document_id" aria-label="Permalink for Section 5.9.1.12.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3575,7 +3567,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-9-1-12-2-relatiesoort-details-document-is-invulling-van"><bdi class="secno">5.9.1.12.2 </bdi>Relatiesoort details  <a href="#global_class_CIMAM_Document">Document</a> is invulling van</h6><a class="self-link" href="#detail_association_CIMAM_Document_isInvullingVan" aria-label="Permalink for Section 5.9.1.12.2"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3611,7 +3603,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMAM_Bronlocatie_type">
                <div class="header-wrapper"><h6 id="x5-9-2-1-1-data-element-bronlocatie-type"><bdi class="secno">5.9.2.1.1 </bdi>Data element  <a href="#global_class_CIMAM_Bronlocatie">Bronlocatie</a> type</h6><a class="self-link" href="#detail_attribute_CIMAM_Bronlocatie_type" aria-label="Permalink for Section 5.9.2.1.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3643,7 +3635,7 @@ dataspecificatie.</p>
    <section id="detail_class_CIMAM_DoelVerzoek">
       <div class="header-wrapper"><h3 id="x6-1-enumeratie-details-doel-verzoek"><bdi class="secno">6.1 </bdi>Enumeratie details  Doel­Verzoek</h3><a class="self-link" href="#detail_class_CIMAM_DoelVerzoek" aria-label="Permalink for Section 6.1"></a></div>
       
-      <table style="width: 100%;" class="list simple">
+      <table style="width: 100%;" class="list">
          <colgroup></colgroup>
          <tbody>
             <tr>
@@ -3652,7 +3644,7 @@ dataspecificatie.</p>
          </tbody>
       </table>
       
-      <table style="width: 100%;" class="list simple">
+      <table style="width: 100%;" class="list">
          <colgroup style="width: 40%;"></colgroup>
          <colgroup style="width: 60%;"></colgroup>
          <tbody>
@@ -3682,7 +3674,7 @@ dataspecificatie.</p>
    <section id="detail_class_CIMAM_TypeVerzoek">
       <div class="header-wrapper"><h3 id="x6-2-enumeratie-details-type-verzoek"><bdi class="secno">6.2 </bdi>Enumeratie details  Type­Verzoek</h3><a class="self-link" href="#detail_class_CIMAM_TypeVerzoek" aria-label="Permalink for Section 6.2"></a></div>
       
-      <table style="width: 100%;" class="list simple">
+      <table style="width: 100%;" class="list">
          <colgroup></colgroup>
          <tbody>
             <tr>
@@ -3691,7 +3683,7 @@ dataspecificatie.</p>
          </tbody>
       </table>
       
-      <table style="width: 100%;" class="list simple">
+      <table style="width: 100%;" class="list">
          <colgroup style="width: 40%;"></colgroup>
          <colgroup style="width: 60%;"></colgroup>
          <tbody>
@@ -3733,7 +3725,7 @@ dataspecificatie.</p>
    <section id="detail_class_CIMAM_Locatietype">
       <div class="header-wrapper"><h3 id="x6-3-enumeratie-details-locatietype"><bdi class="secno">6.3 </bdi>Enumeratie details  Locatietype</h3><a class="self-link" href="#detail_class_CIMAM_Locatietype" aria-label="Permalink for Section 6.3"></a></div>
       
-      <table style="width: 100%;" class="list simple">
+      <table style="width: 100%;" class="list">
          <colgroup></colgroup>
          <tbody>
             <tr>
@@ -3742,7 +3734,7 @@ dataspecificatie.</p>
          </tbody>
       </table>
       
-      <table style="width: 100%;" class="list simple">
+      <table style="width: 100%;" class="list">
          <colgroup style="width: 40%;"></colgroup>
          <colgroup style="width: 60%;"></colgroup>
          <tbody>
